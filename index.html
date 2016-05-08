@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>1 Col Portfolio - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/c3.css">
+    <!-- Custom CSS -->
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    <small>Health Dashboard</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project One -->
+        <div class="row">
+            <div class="col-md-7">
+                <div id="chart3"></div>
+            </div>
+            <div class="col-md-5">
+                <h3>Television</h3>
+                <p>This is the current(real-time) health of your refrigerator. Click on the button to get the health analytics</p>
+                <a class="btn btn-primary" href="#">View Health Analysis <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+       <div class="row">
+            <div class="col-md-7">
+                <div id="chart2"></div>
+            </div>
+            <div class="col-md-5">
+                <h3>Refrigerator</h3>
+                <p>This is the current(real-time) health of your televison. Click on the button to get the health analytics</p>
+                <a class="btn btn-primary" href="#">View Health Analysis <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+     <div class="row">
+            <div class="col-md-7">
+                <div id="chart11"></div>
+            </div>
+            <div class="col-md-5">
+                <h3>Iphone</h3>
+                <p>This is the current(real-time) health of your iphone. Click on the button to get the health analytics</p>
+                <a class="btn btn-primary" href="#">View Health Analysis <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+         <hr>
+        <!-- Project Three -->
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/c3.js"></script>
+     <script>
+      var chart = c3.generate({
+        bindto: '#chart',
+        data: {
+          x : 'date',
+          xFormat : '%Y%m%d',
+          columns: [
+//            ['x', '2013-01-01', '2013-01-02', '2013-01-03', '2013-01-04', '2013-01-05', '2013-01-06'],
+            ['date', '20130101', '20130102', '20130103', '20130104', '20130105', '20130106'],
+            ['sample', 30, 200, 100, 400, 150, 250],
+            ['sample2', 130, 300, 200, 450, 250, 350]
+          ]
+        },
+        grid: {
+          x: {
+            show: true,
+          },
+          y: {
+            show: true,
+          }
+        },
+        axis : {
+          x : {
+            type : 'timeseries',
+            tick : {
+//              format : "%m/%d" // https://github.com/mbostock/d3/wiki/Time-Formatting#wiki-format
+              format : "%e %b %y" // https://github.com/mbostock/d3/wiki/Time-Formatting#wiki-format
+            }
+          }
+        }
+      });
+
+    </script>
+    <script type="text/javascript">
+        
+    var chart = c3.generate({
+        bindto: '#chart2',
+        data: {
+            x: 'x',
+    //        xFormat: '%Y%m%d', // 'xFormat' can be used as custom format of 'x'
+            columns: [
+                ['x', '2016-04-01', '2016-04-02', '2016-04-03', '2016-04-04', '2016-04-05', '2016-04-06'
+                ,'2016-04-07','2016-04-08'
+                ,'2016-04-09','2016-04-10','2016-04-11','2016-04-12','2016-04-13','2016-04-14'
+                ,'2016-04-15','2016-04-16',
+                '2016-04-17','2016-04-18','2016-04-19','2016-04-20','2016-04-21','2016-04-22'
+                ,'2016-04-23','2016-04-24',
+                '2016-04-25','2016-04-26','2016-04-27','2016-04-28','2016-04-29','2016-04-30'
+                ],
+    //            ['x', '20130101', '20130102', '20130103', '20130104', '20130105', '20130106'],
+                ['Refrigerator Temperature(in Celcius)', 18.66, 19.55, 18.36, 17.98, 20.23, 16.10,16.79,20.98,21.98,21.90,18.79
+                ,19.87,18.98,17.78,18.98,18.54,19.08,17.94,21.01,20.20,19.98,30.07,20.40,19.76,20.99,19.9,20.54,
+                19.67,19.88,20.26]
+            ]
+        },
+        grid: {
+          x: {
+            show: true,
+          },
+          y: {
+            show: true,
+          }
+        },
+        axis: {
+            x: {
+                type: 'timeseries',
+                tick: {
+                    format: '%Y-%m-%d'
+                }
+            }
+        }
+    });
+    </script>
+    <script type="text/javascript">
+            
+    var chart = c3.generate({
+        bindto: '#chart3',
+        data: {
+            x: 'x',
+    //        xFormat: '%Y%m%d', // 'xFormat' can be used as custom format of 'x'
+            columns: [
+                ['x', '2016-04-01', '2016-04-02', '2016-04-03', '2016-04-04', '2016-04-05', '2016-04-06'
+                ,'2016-04-07','2016-04-08'
+                ,'2016-04-09','2016-04-10','2016-04-11','2016-04-12','2016-04-13','2016-04-14'
+                ,'2016-04-15','2016-04-16',
+                '2016-04-17','2016-04-18','2016-04-19','2016-04-20','2016-04-21','2016-04-22'
+                ,'2016-04-23','2016-04-24',
+                '2016-04-25','2016-04-26','2016-04-27','2016-04-28','2016-04-29','2016-04-30'
+                ],
+    //            ['x', '20130101', '20130102', '20130103', '20130104', '20130105', '20130106'],
+                ['Television', 18.66, 19.55, 18.36, 17.98, 20.23, 16.10,16.79,20.98,21.98,21.90,18.79
+                ,19.87,18.98,17.78,18.98,18.54,19.08,17.94,21.01,20.20,19.98,30.07,20.40,19.76,20.99,19.9,20.54,
+                19.67,19.88,20.26]
+            ]
+        },
+        grid: {
+          x: {
+            show: true,
+          },
+          y: {
+            show: true,
+          }
+        },
+        axis: {
+            x: {
+                type: 'timeseries',
+                tick: {
+                    format: '%Y-%m-%d'
+                }
+            }
+        }
+    });
+
+var chart1 = c3.generate({
+          bindto: '#chart11',
+          data: {
+              columns: [
+                  ['Battery Temperature', 75.0]
+              ],
+              type: 'gauge',
+          },
+          gauge: {
+              min: 50,
+              max: 100
+          }
+      });
+var chart111 = c3.generate({
+    bindto: '#chart3',
+    data: {
+        columns: [
+            ['x', '2016-04-01', '2016-04-02', '2016-04-03', '2016-04-04', '2016-04-05', '2016-04-06'
+                ,'2016-04-07','2016-04-08'
+                ,'2016-04-09','2016-04-10','2016-04-11','2016-04-12','2016-04-13','2016-04-14'
+                ,'2016-04-15','2016-04-16',
+                '2016-04-17','2016-04-18','2016-04-19','2016-04-20','2016-04-21','2016-04-22'
+                ,'2016-04-23','2016-04-24',
+                '2016-04-25','2016-04-26','2016-04-27','2016-04-28','2016-04-29','2016-04-30'
+                ],
+            ['data2', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0 , 0 , 0 , 0, 1, 1, 1,0,0,1 ]
+        ],
+        type: 'bar'
+    },
+    bar: {
+        width: {
+            ratio: 0.5 // this makes bar width 50% of length between ticks
+        }
+        // or
+        //width: 100 // this makes bar width 100px
+    }
+});
+    </script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
